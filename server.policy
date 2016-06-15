@@ -1,0 +1,3 @@
+grant codeBase "file:./build/classes/main/" {
+    permission java.security.AllPermission;
+};
