@@ -13,6 +13,7 @@ def rmiComponent = 'Practice-Java-RMI-Components'
 
 mainClassName = 'org.rmi.servers.ComputeRemote'
 applicationDefaultJvmArgs = [
+    '-Djava.rmi.server.codebase=http://localhost:8088/',
     '-Djava.rmi.server.useCodebaseOnly=false',
     '-Djava.security.policy=server.policy'
 ]
@@ -25,7 +26,6 @@ test.testLogging.showStandardStreams = true;
 
 dependencies {
     compile project(':' + rmiComponent)
-    runtime project(':Practice-Java-RMI-Client')
 
     testCompile 'junit:junit:4.12'
 }
