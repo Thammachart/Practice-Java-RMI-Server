@@ -10,6 +10,7 @@ import org.rmi.components.Task;
 
 public class ComputeRemote implements ComputeRemoteInterface {
 
+    @Override
     public <T> T executeTask(Task<T> task) {
         return task.execute();
     }
